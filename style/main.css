@@ -1,0 +1,104 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid white;
+}
+
+.header-wapper {
+  width: 90%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 40px;
+}
+
+.bar-menu {
+  width: 100%;
+  height: 5px;
+  margin-bottom:5px;
+  background-color: blueviolet;
+  transition: all .5s;
+}
+
+.bar-menu.-two {
+  width: 80%;
+}
+
+.nav-links {
+  width: 100%;
+  position: absolute;
+  top: 24%;
+  left: 999px;
+  z-index: -1000;
+  opacity: 0;
+  animation-name: slideOutRight;
+  animation-duration: .5s;
+}
+
+.nav-links li {
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+
+ul, li, a {
+  opacity: 0;
+  z-index: -1000;
+}
+
+/* Open Menu */
+
+.nav-links.-open, ul, li, a {
+  opacity: 1;
+  z-index: 0;
+}
+
+.nav-links.-open {
+  top: 24%;
+  left: 0px;
+  animation-name: slideInRight;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+.menu-toggle.-open .-one {
+  width: 80%;
+  transform: rotate(45deg) translate(2px, 5px);
+}
+
+.menu-toggle.-open .-two {
+  transform: rotate(-45deg) translate(2px, -5px);
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Animação de saída */
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    left: 999px;
+    transform: translateX(100%);
+  }
+}
