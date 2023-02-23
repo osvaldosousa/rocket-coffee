@@ -8,6 +8,8 @@ body {
   font-family: 'Manrope', sans-serif;
 }
 
+/* Header Content */
+
 .header-content {
   display: flex;
   justify-content: center;
@@ -44,14 +46,7 @@ body {
 }
 
 .nav-links {
-  width: 100%;
-  position: absolute;
-  top: 24%;
-  left: 999px;
-  z-index: -1000;
-  opacity: 0;
-  animation-name: slideOutRight;
-  animation-duration: .5s;
+  display: none;
 }
 
 .nav-links li {
@@ -59,20 +54,25 @@ body {
   border-bottom: 1px solid white;
 }
 
-/* Open Menu */
-
-.nav-links.-open, ul, li, a {
-  opacity: 1;
-  z-index: 0;
-}
+/* Header | Open Menu */
 
 .nav-links.-open {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background-color: rgb(37, 4, 68);
+  position: absolute;
   top: 13%;
   left: 0px;
   transform: translateX(100%);
   animation-name: slideInRight;
   animation-duration: .5s;
   animation-fill-mode: forwards;
+}
+
+.nav-links.-open li:hover a {
+  color: rgb(126, 119, 119);
+  background-color: red;
 }
 
 .menu-toggle.-open .-one {
@@ -87,11 +87,5 @@ body {
 @keyframes slideInRight {
   to {
     transform: translateX(0);
-  }
-}
-
-@keyframes slideOutRight {
-  to {
-    transform: translateX(100%);
   }
 }
