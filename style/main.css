@@ -1,6 +1,11 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+
+
 body {
   background-color: black;
   color: white;
+  font-family: 'Manrope', sans-serif;
 }
 
 .header-content {
@@ -54,11 +59,6 @@ body {
   border-bottom: 1px solid white;
 }
 
-ul, li, a {
-  opacity: 0;
-  z-index: -1000;
-}
-
 /* Open Menu */
 
 .nav-links.-open, ul, li, a {
@@ -67,8 +67,9 @@ ul, li, a {
 }
 
 .nav-links.-open {
-  top: 24%;
+  top: 13%;
   left: 0px;
+  transform: translateX(100%);
   animation-name: slideInRight;
   animation-duration: .5s;
   animation-fill-mode: forwards;
@@ -84,21 +85,13 @@ ul, li, a {
 }
 
 @keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-  }
   to {
     transform: translateX(0);
   }
 }
 
-/* Animação de saída */
 @keyframes slideOutRight {
-  from {
-    transform: translateX(0);
-  }
   to {
-    left: 999px;
     transform: translateX(100%);
   }
 }
