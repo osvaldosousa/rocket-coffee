@@ -139,15 +139,16 @@ body {
 }
 
 .section-images h2 {
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .section-images .icon-tittle {
-  width: 300px;
+  width: 260px;
 }
 
 .background-image {
   width: 100%;
+  max-width: 350px;
 }
