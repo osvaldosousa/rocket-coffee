@@ -60,9 +60,9 @@ body {
   width: 100vw;
   height: 100vh;
   display: block;
-  background-color: rgb(41, 41, 46);
+  background-color: #000000;
   position: absolute;
-  top: 13%;
+  top: 10%;
   left: 0px;
   transform: translateX(100%);
   animation-name: slideInRight;
@@ -71,11 +71,11 @@ body {
 }
 
 .nav-links.-open a {
-  color: #fff;
+  color: #A8A8B3;
 }
 
 .nav-links.-open li:hover a {
-  color: rgb(126, 119, 119);
+  color: #fff;
 }
 
 .menu-toggle.-open .-one {
@@ -136,6 +136,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: linear-gradient(to bottom, #000000, #200914, #340b25, #460b3c, #540e58);
 }
 
 .section-images h2 {
