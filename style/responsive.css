@@ -1,0 +1,50 @@
+/* Elementos não visiveis para mobile */
+.button-main.-header {
+  display: none;
+}
+
+.logo-desktop {
+  display: none;
+}
+
+@media (min-width: 740px) {
+  .header-wapper .menu-toggle, .logo-mobile,  section.section-home {
+    display: none;
+  }
+
+  .logo-desktop {
+    display: block;
+  }
+
+  .button-main.-header {
+    display: block;
+  }
+
+  .header-wapper .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+
+  .header-wapper .nav-links li {
+    border: none;
+    padding: 0;
+  }
+
+  .header-wapper .nav-links a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .section-images {
+    margin-top: 40px;
+  }
+
+  .section-images .title-second.-desktop {
+    font-size: 8rem;
+  }
+
+  .section-images .icon-title.-desktop {
+    width: 540px;
+  }
+}
